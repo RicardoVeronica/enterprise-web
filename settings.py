@@ -46,6 +46,7 @@ INSTALLED_APPS.extend([
     # Extend the INSTALLED_APPS setting by listing additional applications here
     'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
+    'blog.apps.BlogConfig',
 ])
 
 # To see the settings that have been applied, use the Django diffsettings
