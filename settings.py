@@ -48,6 +48,7 @@ INSTALLED_APPS.extend([
     'services.apps.ServicesConfig',
     'blog.apps.BlogConfig',
     'social.apps.SocialConfig',
+    'legal.apps.LegalConfig',
 ])
 
 # context processors for social app
