@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Post
 
 
 def blog(request):
@@ -6,4 +7,6 @@ def blog(request):
     Blog view
     """
     template = 'blog/blog.html'
-    return render(request, template)
+    posts = Post.objects.all()
+    context = {'posts': posts}
+    return render(request, template, context)
