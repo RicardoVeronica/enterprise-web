@@ -16,6 +16,9 @@
                 </h2>
                 <div class="section-content">
                     {{ legal.content|linebreaks }}
+                    {% if user.is_authenticated %}
+                    <p><a href="{% url 'admin:legal_legal_change' legal.id %}">Edit</a></p> 
+                    {% endif %}
                 </div>
               </div>
             </div>

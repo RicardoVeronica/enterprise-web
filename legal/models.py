@@ -7,6 +7,7 @@ class Legal(models.Model):
     """
     title = models.CharField(max_length=100)
     content = models.TextField()
+    order = models.SmallIntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -14,7 +15,7 @@ class Legal(models.Model):
         """
         Meta data for Legal model
         """
-        ordering = ['-title']
+        ordering = ['order', 'title']
 
     def __str__(self):
         """

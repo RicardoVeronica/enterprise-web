@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Legal
 
 
-def legal(request, legal_id):
+def legal(request, legal_id, legal_slug):
     """
     Views for legal files
     """
