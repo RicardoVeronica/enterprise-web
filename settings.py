@@ -47,7 +47,11 @@ INSTALLED_APPS.extend([
     'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
     'blog.apps.BlogConfig',
+    'social.apps.SocialConfig',
 ])
+
+# context processors for social app
+TEMPLATES[0]["OPTIONS"]["context_processors"].append('social.processors.context_dictionary')
 
 # To see the settings that have been applied, use the Django diffsettings
 # management command.
