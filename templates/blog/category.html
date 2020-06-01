@@ -7,7 +7,8 @@
 {% endblock title %}
 
 {% block content %}
-{% for post in posts %}
+<!-- related_name in post models for categories (category.post_set.all) -->
+{% for post in category.get_posts.all %}
     <section class="page-section cta">
       <div class="container">
         <div class="row">
@@ -23,8 +24,8 @@
               <p class="mb-0 mbt">{{ post.content|linebreaks }}</p>
               <p class="mb-0 mbt">
               <span class="section-heading-under">Publicado por <em><b>{{ post.author }}</b></em> en
-              <em>
               {% for category in post.categories.all %}
+              <em>
               <a href="{% url 'category_url' category.id %}" class="link">{{ category.name }}</a>{% if not forloop.last %},{% endif %}
               {% endfor %}
               </em>
