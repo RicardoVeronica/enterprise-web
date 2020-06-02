@@ -10,6 +10,7 @@ urlpatterns = [
     path('', include('services.urls')),
     path('blog/', include('blog.urls')),
     path('', include('legal.urls')),
+    path('contact/', include('contact.urls')),
 ] + aldryn_addons.urls.patterns() + i18n_patterns(
     # add your own i18n patterns here
     *aldryn_addons.urls.i18n_patterns()  # MUST be the last entry!

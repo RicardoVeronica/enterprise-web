@@ -49,6 +49,7 @@ INSTALLED_APPS.extend([
     'blog.apps.BlogConfig',
     'social.apps.SocialConfig',
     'legal.apps.LegalConfig',
+    'contact.apps.ContactConfig',
     'ckeditor',
 ])
 
@@ -66,6 +67,12 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+# mailtrap
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'a26b7e224f1bfa'
+EMAIL_HOST_PASSWORD = '1abf6df3ec9520'
+EMAIL_PORT = '2525'
 
 # To see the settings that have been applied, use the Django diffsettings
 # management command.

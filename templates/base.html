@@ -53,7 +53,7 @@
                 <a class="nav-link text-uppercase text-expanded" href="{% url 'timetable_url' %}">Visítanos</a>
             </li>
             <li class="nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="contact.html">Contacto</a>
+                <a class="nav-link text-uppercase text-expanded" href="{% url 'contact_url' %}">Contacto</a>
             </li>
             <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %} px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" href="{% url 'blog_url' %}">Blog</a>
