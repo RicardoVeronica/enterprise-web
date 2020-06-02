@@ -15,7 +15,7 @@
                     <span class="section-heading-lower">{{ legal.title }}</span>
                 </h2>
                 <div class="section-content">
-                    {{ legal.content|linebreaks }}
+                    {{ legal.content|safe }}
                     {% if user.is_authenticated %}
                     <p><a href="{% url 'admin:legal_legal_change' legal.id %}">Edit</a></p> 
                     {% endif %}

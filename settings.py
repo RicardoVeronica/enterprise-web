@@ -49,10 +49,23 @@ INSTALLED_APPS.extend([
     'blog.apps.BlogConfig',
     'social.apps.SocialConfig',
     'legal.apps.LegalConfig',
+    'ckeditor',
 ])
 
 # context processors for social app
 TEMPLATES[0]["OPTIONS"]["context_processors"].append('social.processors.context_dictionary')
+
+# ckeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+        ]
+    }
+}
 
 # To see the settings that have been applied, use the Django diffsettings
 # management command.
