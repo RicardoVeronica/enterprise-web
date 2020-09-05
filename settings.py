@@ -44,6 +44,7 @@ aldryn_addons.settings.load(locals())
 
 INSTALLED_APPS.extend([
     'core.apps.CoreConfig',
+    'services.apps.ServicesConfig',
 ])
 
 # To see the settings that have been applied, use the Django diffsettings
