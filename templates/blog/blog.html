@@ -7,6 +7,7 @@ Blog
 {% endblock title %}
 
 {% block content %}
+{% for post in posts %}
 
 <section class="page-section cta">
   <div class="container">
@@ -14,22 +15,25 @@ Blog
       <div class="col-xl-9 mx-auto">
         <div class="cta-innerv text-center rounded">
           <h2 class="section-heading mb-5">
-            <span class="section-heading-upper">17/05/2000</span>
-            <span class="section-heading-lower">Ofertas de otoño</span>
+            <span class="section-heading-upper">{{ post.published|date:'SHORT_DATE_FORMAT' }}</span>
+            <span class="section-heading-lower">{{ post.title }}</span>
           </h2>
           <p class="mb-0">
-          <img class="mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'img/products-01.jpg' %}" alt="Imagen de post">
+          <img class="mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ post.image.url }}" alt="Imagen de post">
           </p>
+          <p class="mb-0 u">{{ post.content|linebreaks }}</p>
+
           <p class="mb-0 mbt">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo dui, vehicula vel dapibus ac, tempus non enim. Nunc tempor vel lacus vel gravida. Nam sit amet pellentesque mi. Aliquam eget porta mi, quis fermentum metus. Curabitur efficitur pellentesque tellus nec volutpat. In viverra mattis sem, facilisis condimentum mi rutrum ut. Quisque ut pellentesque dui. Nullam eu vehicula metus. Pellentesque id interdum elit. Aenean in efficitur enim.
+            <span class="section-heading-under">Publicado por
+              <em><b>{{ post.author }}</b></em> en
+              <em><a href="#" class="link">General</a>, <a href="#" class="link">Ofertas</a></em></span>
           </p>
-          <p class="mb-0 mbt">
-            <span class="section-heading-under">Publicado por <em><b>Juan</b></em> en <em><a href="#" class="link">General</a>, <a href="#" class="link">Ofertas</a></em></span>
-          </p>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
+{% endfor %}
 {% endblock content %}
