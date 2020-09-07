@@ -7,7 +7,7 @@ Blog
 {% endblock title %}
 
 {% block content %}
-{% for post in posts %}
+{% for post in category.posts.all %}
 
 <section class="page-section cta">
   <div class="container">
