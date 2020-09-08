@@ -46,7 +46,12 @@ INSTALLED_APPS.extend([
     'core.apps.CoreConfig',
     'services.apps.ServicesConfig',
     'blog.apps.BlogConfig',
+    'socialnets.apps.SocialnetsConfig',
 ])
+
+TEMPLATES[0]["OPTIONS"]['context_processors'].append(
+    'socialnets.processors.context_processor'
+)
 
 # To see the settings that have been applied, use the Django diffsettings
 # management command.
