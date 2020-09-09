@@ -47,6 +47,7 @@ INSTALLED_APPS.extend([
     'services.apps.ServicesConfig',
     'blog.apps.BlogConfig',
     'socialnets.apps.SocialnetsConfig',
+    'pages.apps.PagesConfig',
 ])
 
 TEMPLATES[0]["OPTIONS"]['context_processors'].append(
