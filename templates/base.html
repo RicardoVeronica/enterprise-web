@@ -53,8 +53,8 @@
             <li class="nav-item px-lg-4 {% if request.path == '/store/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'store' %}">Visítanos</a>
             </li>
-            <li class="nav-item px-lg-4 {% if request.path == '' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="#">Contacto</a>
+            <li class="nav-item px-lg-4 {% if request.path == '/form/' %}active{% endif %}">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'form' %}">Contacto</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path|slice:"0:6" == '/blog/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>

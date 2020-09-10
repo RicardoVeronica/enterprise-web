@@ -48,6 +48,7 @@ INSTALLED_APPS.extend([
     'blog.apps.BlogConfig',
     'socialnets.apps.SocialnetsConfig',
     'pages.apps.PagesConfig',
+    'form.apps.FormConfig',
 
     # 3rd party
     'ckeditor',
@@ -56,6 +57,11 @@ INSTALLED_APPS.extend([
 TEMPLATES[0]["OPTIONS"]['context_processors'].append(
     'socialnets.processors.context_processor'
 )
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '8bd0c9e2b07656'
+EMAIL_HOST_PASSWORD = '78c3aaefffd4b2'
+EMAIL_PORT = '2525'
 
 # To see the settings that have been applied, use the Django diffsettings
 # management command.
