@@ -14,7 +14,7 @@ paginas legales
             <h2 class="section-heading mb-4">
               <span class="section-heading-lower">{{ page.title }}</span>
             </h2>
-            <div class="section-content">{{ page.content|linebreaks }}</div>
+            <div class="section-content">{{ page.content|safe }}</div>
             {% if user.is_authenticated %}
             <a href="{% url 'admin:pages_page_change' page.id %}" class="link" target="_blank">Editar</a>
             {% endif %}

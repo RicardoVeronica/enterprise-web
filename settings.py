@@ -48,6 +48,9 @@ INSTALLED_APPS.extend([
     'blog.apps.BlogConfig',
     'socialnets.apps.SocialnetsConfig',
     'pages.apps.PagesConfig',
+
+    # 3rd party
+    'ckeditor',
 ])
 
 TEMPLATES[0]["OPTIONS"]['context_processors'].append(

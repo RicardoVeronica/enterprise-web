@@ -3,3 +3,4 @@ https://control.divio.com/api/v1/apps/serve/aldryn-addons/2.0.0/ef24ec0c-c20d-44
 https://control.divio.com/api/v1/apps/serve/aldryn-django/2.2.16.1/b460938a-f357-49a3-9aef-9dfb40946551/aldryn-django-2.2.16.1.tar.gz#egg=aldryn-django==2.2.16.1
 https://control.divio.com/api/v1/apps/serve/aldryn-sso/2.0.0/e6eccefa-e8f5-492d-8e71-79fc99f30201/aldryn-sso-2.0.0.tar.gz#egg=aldryn-sso==2.0.0
 # </INSTALLED_ADDONS>
+django-ckeditor
