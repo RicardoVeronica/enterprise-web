@@ -6,21 +6,21 @@ in "Servicios" & contact form
 ### This project uses
 
 * Template Tags
--- {% for %}
--- {% if %}
--- {% url %}
--- {% block %}
--- {% static %}
--- {% csrf_token %}
+  * {% for %}
+  * {% if %}
+  * {% url %}
+  * {% block %}
+  * {% static %}
+  * {% csrf_token %}
 * Filters
--- |slice
--- |date
--- |linebreaks
--- |safe
+  * |slice
+  * |date
+  * |linebreaks
+  * |safe
 * Django models
--- Relation one to one ForeignKey
--- Relation many to many
--- Users from Django contributions Auth model
+  * Relation one to one ForeignKey
+  * Relation many to many
+  * Users from Django contributions Auth model
 * Django Admin
 * Context processors
 * Django-ckeditor for admin
